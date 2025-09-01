@@ -1,0 +1,63 @@
+:root {
+    --bg-color: white;
+    --text-color: #444;
+
+    --text-link-color: green;
+    --text-link-hover-color: greenyellow;
+
+    --space-xs: 4px;
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 32px;
+    --space-xl: 64px;
+
+/*             --font-size: clamp(1rem, 2.5vw, 2rem); */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: white;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-family: "Atkinson Hyperlegible Next", sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+
+    margin: var(--space-xl) auto;
+    padding: 0 var(--space-s);
+    max-width: 55ch; /* Optimal reading line length is 45-75 characters */
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+h1 {
+    border-bottom: var(--text-color) solid 1px;
+}
+
+aside {
+    margin-top: 0;
+}
+
+p {
+    margin-top: var(--space-s);
+}
+
+a,
+a:visited {
+    color: var(--text-link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-link-hover-color);
+}
